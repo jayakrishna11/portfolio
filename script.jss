@@ -19,3 +19,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Optional: Add active class on scroll (more complex, needs more code)
+
+const hamburgerButton = document.getElementById('hamburger-button');
+const navLinks = document.getElementById('navbar'); // Target the whole nav now
+const navLinkItems = document.querySelectorAll('#nav-links li a'); // Get all links
+
+hamburgerButton.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Optional: Close menu when a link is clicked (good for single-page sites)
+navLinkItems.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
