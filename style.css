@@ -243,6 +243,95 @@ footer .fa-heart { color: red; }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    
+    /* ... Keep the existing rules for navbar and timeline ... */
+
+    /* === NEW RULES FOR FONT SIZES === */
+
+    body {
+        font-size: 15px; /* Adjust base font slightly if needed */
+    }
+
+    .section h2 {
+        font-size: 1.8em; /* Make main section titles smaller */
+        margin-bottom: 30px;
+    }
+
+    #about h1 {
+        font-size: 2.4em; /* Reduce the main name size */
+    }
+
+    #about h2 {
+        font-size: 1.3em; /* Reduce the subtitle size */
+    }
+
+    #about .summary {
+        font-size: 1em; /* Adjust summary text if needed */
+    }
+
+    .skill-category h3 {
+        font-size: 1.1em; /* Smaller skill titles */
+    }
+    .skill-category ul li {
+        font-size: 0.95em; /* Smaller skill list items */
+    }
+
+    .timeline-item h3 {
+        font-size: 1.2em; /* Smaller experience titles */
+    }
+     .timeline-item p,
+     .timeline-item ul {
+        font-size: 0.9em; /* Smaller experience text */
+    }
+
+    .project-card h4 {
+        font-size: 1.1em;
+    }
+     .project-card p {
+        font-size: 0.9em;
+    }
+
+    .education-item h3 {
+        font-size: 1.1em;
+    }
+    .education-item p {
+        font-size: 0.9em;
+    }
+
+    #contact h2 {
+        font-size: 1.8em;
+    }
+    #contact p {
+        font-size: 1em;
+    }
+    .contact-links a {
+        font-size: 1.1em; /* Adjust contact links */
+        display: block; /* Make links stack vertically */
+        margin: 10px 0; /* Add space between stacked links */
+    }
+
+    /* === ADJUST PADDING FOR SMALLER SCREENS === */
+    .section {
+        padding: 40px 0; /* Reduce top/bottom padding */
+    }
+    .container {
+        padding: 0 15px; /* Slightly reduce side padding */
+    }
+
+    /* === EXISTING RULES (MAKE SURE THEY ARE STILL HERE) === */
+    #navbar ul { flex-direction: column; text-align: center; }
+    #navbar ul li { margin-bottom: 5px; }
+    body { padding-top: 0; }
+    #main-header { position: static; }
+    .timeline::after { left: 31px; }
+    .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left; }
+    .timeline-item::after { left: 23px; }
+    .timeline-item:nth-child(even) { left: 0; }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) { text-align: left; padding-left: 60px; }
+     .timeline-item:nth-child(odd) ul,
+     .timeline-item:nth-child(even) ul { padding-left: 20px; list-style-position: outside; }
+
     #navbar ul { flex-direction: column; text-align: center; }
     #navbar ul li { margin-bottom: 5px; }
     body { padding-top: 0; } /* Adjust or handle fixed nav differently */
