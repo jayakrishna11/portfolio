@@ -240,7 +240,63 @@ footer {
     font-size: 0.9em;
 }
 footer .fa-heart { color: red; }
+/* --- Header & Nav Updates --- */
+#main-header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 70px; /* Give header a fixed height */
+    padding: 0; /* Remove default padding */
+}
 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo a {
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex; /* Keep flex for desktop */
+    margin: 0; /* Reset margin */
+}
+
+#navbar ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 10px 15px; /* Adjust padding slightly */
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block; /* Ensure links take up space */
+}
+
+#navbar ul li a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 4px;
+}
+
+.hamburger {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+/* --- End Header & Nav Updates --- */
 /* Responsive Design */
 @media (max-width: 768px) {
     
@@ -318,25 +374,60 @@ footer .fa-heart { color: red; }
         padding: 0 15px; /* Slightly reduce side padding */
     }
 
-    /* === EXISTING RULES (MAKE SURE THEY ARE STILL HERE) === */
-    #navbar ul { flex-direction: column; text-align: center; }
-    #navbar ul li { margin-bottom: 5px; }
-    body { padding-top: 0; }
-    #main-header { position: static; }
-    .timeline::after { left: 31px; }
-    .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left; }
-    .timeline-item::after { left: 23px; }
-    .timeline-item:nth-child(even) { left: 0; }
-    .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even) { text-align: left; padding-left: 60px; }
-     .timeline-item:nth-child(odd) ul,
-     .timeline-item:nth-child(even) ul { padding-left: 20px; list-style-position: outside; }
+   /* === NEW NAV & HAMBURGER RULES === */
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+        z-index: 1100; /* Ensure it's on top */
+    }
 
-    #navbar ul { flex-direction: column; text-align: center; }
-    #navbar ul li { margin-bottom: 5px; }
-    body { padding-top: 0; } /* Adjust or handle fixed nav differently */
-    #main-header { position: static; }
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Start off-screen */
+        width: 70%; /* Adjust width as needed */
+        height: 100vh;
+        background-color: #333; /* Dark background for mobile menu */
+        transition: left 0.3s ease-in-out;
+        padding-top: 80px; /* Space for logo/close button */
+        z-index: 1050;
+    }
 
+    #navbar.active {
+        left: 0; /* Slide in when active */
+    }
+
+    #navbar ul {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center links */
+        width: 100%;
+    }
+
+    #navbar ul li {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px; /* Add space between links */
+    }
+
+    #navbar ul li a {
+        color: #fff; /* Light text for dark background */
+        padding: 15px 0;
+        font-size: 1.2em;
+    }
+
+    #navbar ul li a:hover {
+        background-color: var(--secondary-color);
+        color: #fff;
+        border-radius: 0; /* Full width hover */
+    }
+
+    body { padding-top: 70px; } /* Keep padding for fixed header */
+    #main-header { /* No need for position: static; anymore */ }
+
+    /* === Keep your existing font/timeline rules below === */
+    /* ... */
+    body { font-size: 15px; }
+    .section h2 { font-size: 1.8em; }
+    /* ... etc ... */
     /* Center timeline */
     .timeline::after { left: 31px; }
     .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left; }
