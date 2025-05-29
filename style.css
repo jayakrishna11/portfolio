@@ -323,6 +323,7 @@ footer .fa-heart { color: red; }
 
     #about .summary {
         font-size: 1.1em;
+        text-align: justify;
     }
 
     .skill-category h3 {
