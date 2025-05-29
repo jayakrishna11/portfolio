@@ -82,7 +82,7 @@ body {
 #about { text-align: center; }
 #about h1 { font-size: 3em; margin-bottom: 10px; color: var(--text-dark); }
 #about h2 { font-size: 1.5em; color: var(--secondary-color); margin-bottom: 20px; font-weight: normal; }
-#about .summary { max-width: 800px; margin: 20px auto; font-size: 1.1em; }
+#about .summary { max-width: 800px; margin: 20px auto; font-size: 1.1em; text-align: justify;}
 
 /* Skills Section */
 .skills-grid {
@@ -322,9 +322,7 @@ footer .fa-heart { color: red; }
     }
 
     #about .summary {
-        max-width: 800px;
-    margin: 20px auto;
-    font-size: 1.1em;
+        font-size: 1.1em;
     }
 
     .skill-category h3 {
