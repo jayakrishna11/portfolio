@@ -322,7 +322,9 @@ footer .fa-heart { color: red; }
     }
 
     #about .summary {
-        font-size: 1em; /* Adjust summary text if needed */
+        max-width: 800px;
+    margin: 20px auto;
+    font-size: 1.1em;
     }
 
     .skill-category h3 {
