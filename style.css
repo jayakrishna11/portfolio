@@ -79,10 +79,36 @@ body {
 }
 
 /* About Section */
-#about { text-align: center; }
-#about h1 { font-size: 3em; margin-bottom: 10px; color: var(--text-dark); }
-#about h2 { font-size: 1.5em; color: var(--secondary-color); margin-bottom: 20px; font-weight: normal; }
-#about .summary { max-width: 800px; margin: 20px auto; font-size: 1.1em; text-align: justify;}
+#about { text-align: center; position: relative; /* Important for potential future enhancements */
+    padding: 80px 0; /* You might need to adjust padding */
+
+    /* === Background Image & Overlay === */
+    /* This applies a 50% dark overlay AND your image */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('images/about-background.jpg'); /* !!! CHANGE 'images/about-background.jpg' IF YOUR PATH/NAME IS DIFFERENT !!! */
+    background-size: cover; /* Covers the entire section */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat;
+    /* Optional: Adds a cool parallax effect, but can sometimes be buggy on mobile */
+    /* background-attachment: fixed; */
+
+    /* === Text Readability === */
+    color: #ffffff; /* Set ALL text in this section to white */}
+#about h1 { font-size: 3em;
+    margin-bottom: 10px;
+    color: #ffffff; /* Ensure white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better contrast */ }
+#about h2 { font-size: 1.5em;
+    /* color: var(--secondary-color); */ /* Change from secondary color */
+    color: #e0e0e0; /* Slightly off-white */
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); }
+#about .summary {  max-width: 800px;
+    margin: 20px auto;
+    font-size: 1.1em;
+    text-align: justify;
+    color: #f4f4f4; /* Ensure white/light grey */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Add shadow */}
 
 /* Skills Section */
 .skills-grid {
