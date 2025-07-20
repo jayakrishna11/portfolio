@@ -323,6 +323,23 @@ footer .fa-heart { color: red; }
     cursor: pointer;
 }
 /* --- End Header & Nav Updates --- */
+
+/* Pi-Shaped Profile Image Styles */
+#skill-profile-image {
+    background-color: var(--background-light); /* Matches the skills section */
+    text-align: center;
+}
+
+.pi-profile-image {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Maintains the aspect ratio */
+    max-height: 500px; /* Optional: Prevents it from being overly large */
+    display: block;
+    margin: 20px auto 0; /* Adds space above and centers it */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     
